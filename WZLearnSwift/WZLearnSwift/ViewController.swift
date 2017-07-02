@@ -63,6 +63,7 @@ class ViewController: UIViewController {
         myButton.setTitle("点击我", for:UIControlState.normal);
         //给button 设置一个文字
         
+        
         //给mybuttom 添加点击事件
         myButton.addTarget(self, action:Selector("clickMe:"), for:UIControlEvents.touchUpInside);
         self.view.addSubview(myButton);
@@ -71,11 +72,20 @@ class ViewController: UIViewController {
         var path = UIBezierPath();
         
         
-        
+        print(layer, path, separator: "lalalaa", terminator: "end");
+        var myInt = Int.max;
+        myInt = 9;
+        var yourInt = myInt + 1;
     }
+    
+    
+    func greet (person: String) -> Void {
+        print("hello world!")
+    }
+    
     //定义一个点击事件的函数
     
-    func clickMe(sender:UIButton){
+    func clickMe(sender:UIButton) {
         clickCount += 1;
         /**
          *  \(这里放变量或者表达式)
@@ -86,8 +96,6 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    
-
 }
+
 
