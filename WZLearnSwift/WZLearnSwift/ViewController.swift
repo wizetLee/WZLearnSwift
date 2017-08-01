@@ -10,27 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//        self.view.backgroundColor = .orange;
-//        let view = UIView();
-//        view.backgroundColor = .yellow;
-//        view.frame = CGRect(x:0,y:100,width:320,height:44);
-//        
-//        self.view.addSubview(view);
-//        
-//        
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        
-//    }
+
     var clickCount:Int = 0;//clickCount 并没有声明为int
     var myLabel:UILabel? //申明一个全局变量？表示初始值为空
     override func viewDidLoad() {
         super.viewDidLoad()//是基类其中有的 必须写个keyword
+        self.automaticallyAdjustsScrollViewInsets = false;
+        var  arr : Array<String> = [];
+        arr = ["1", "2", "3"];
+        let a = arr.count;
+        print("%ld", a);
+        
+        //元组
+        var tuple  = ["1", "2", "3", UIColor()] as [Any];
+        tuple.isEmpty;
+        
         let color = UIColor.red;//创建一个红色对象
         //color 是一个常量
         let color1 = UIColor.gray;
@@ -47,6 +41,7 @@ class ViewController: UIViewController {
         //frame 在父视图中的区间坐标
         //这里是标签内容，将oc 中的标签来拿使用
         let rect = CGRect(x:0,y:100,width:320,height:44);
+        
         myLabel = UILabel(frame: rect);
         myLabel!.text = "百度";//表示为空也能够去创建
         //把myLabel 对象添加到self.view 对象上
@@ -64,8 +59,9 @@ class ViewController: UIViewController {
         //给button 设置一个文字
         
         
+        
         //给mybuttom 添加点击事件
-        myButton.addTarget(self, action:Selector("clickMe:"), for:UIControlEvents.touchUpInside);
+        myButton.addTarget(self, action:#selector(clickMe), for:UIControlEvents.touchUpInside);
         self.view.addSubview(myButton);
         
         var layer = CALayer();
@@ -77,7 +73,6 @@ class ViewController: UIViewController {
         myInt = 9;
         var yourInt = myInt + 1;
     }
-    
     
     func greet (person: String) -> Void {
         print("hello world!")
