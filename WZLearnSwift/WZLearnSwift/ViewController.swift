@@ -21,9 +21,12 @@ class ViewController: UIViewController {
         let a = arr.count;
         print("%ld", a);
         
+
         //元组
         var tuple  = ["1", "2", "3", UIColor()] as [Any];
         tuple.isEmpty;
+        
+        
         
         let color = UIColor.red;//创建一个红色对象
         //color 是一个常量
@@ -91,6 +94,31 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    enum Rank: Int {
+        case Ace = 2
+        case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+        case Jack, Queen, King
+        func simpleDescription() -> String {
+            switch self {
+            case .Ace:
+                return "ace"
+            case .Jack:
+                return "jack"
+            case .Queen:
+                return "queen"
+            case .King:
+                return "king"
+            default:
+                return String(self.rawValue)//rawValue 原始值
+            }
+        }
+    }
+    let ace = Rank.Ace
+//    let aceRawValue = ace.rawValue//playground 是可以的。。。
+    
+    
 }
 
 
