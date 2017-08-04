@@ -337,7 +337,7 @@ wizetInstance.sex
 
 
 enum Rank: Int {
-    case Ace = 2
+    case Ace = 1
     case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
     case Jack, Queen, King
     func simpleDescription() -> String {
@@ -360,6 +360,169 @@ let aceRawValue = ace.rawValue
 /*
     rawValue属性来访问一个枚举成员的原始值。
  */
+
+
+enum ServerResponse {
+    case Result(String, String)//Result（） 和Failure（）并非函数  而只是一个类类型。。。。
+    case Failure(String)
+    
+    func aaaaaa(enumParameter : ServerResponse , parameter1 : String!, parameter2 : String!) -> String {
+        switch enumParameter {
+        case let .Result(parameter1, parameter2):
+            let serverResponse = "Sunrise is at \(parameter1) and sunset is at \(parameter2)."
+            return serverResponse;
+        case let .Failure(parameter1):
+            return "Failure...  \(parameter1)";
+        }
+    }
+}
+
+let success = ServerResponse.Result("6:00 am", "8:09 pm")
+let failure = ServerResponse.Failure("Out of cheese.")
+
+switch failure {
+case let .Result(sunrise, sunset):
+    let serverResponse = "Sunrise is at \(sunrise) and sunset is at \(sunset)."
+case let .Failure(message):
+    print("Failure...  \(message)")
+}
+
+protocol ExampleProtocol {//可多态扩展
+    var simpleDescription: String { get }
+    mutating func adjust();//mutating 突变 mutating 关键字用来标记这是一个可以修改结构体的方法(可修改结构体的初始值等等)
+}
+
+class SimpleClass: ExampleProtocol {
+   
+
+    var simpleDescription: String = "A very simple class."
+    var anotherProperty: Int = 69105
+    
+    func adjust() {
+        simpleDescription += "  Now 100% adjusted."
+    }
+}
+var a = SimpleClass()
+a.adjust()
+
+let aDescription = a.simpleDescription
+
+
+struct SimpleStructure: ExampleProtocol {
+    var simpleDescription: String = "A simple structure"
+    mutating func adjust() {
+        simpleDescription += " (adjusted)"
+    }
+}
+
+
+//使用extension来为现有的类型添加功能，比如新的方法和计算属性。
+extension Int: ExampleProtocol {
+    var simpleDescription: String {
+        return "The number \(self)"
+    }
+    mutating func adjust() {
+        self += 42
+    }
+}
+
+var zero : Int = 1;
+zero.adjust()
+zero.simpleDescription;
+//你可以像使用其他命名类型一样使用协议名——例如，创建一个有不同类型但是都实现一个协议的对象集合。当你处理类型是协议的值时，协议外定义的方法不可用。
+var protocolValue: ExampleProtocol = zero
+protocolValue.adjust();
+(zero as Int);
+
+enum PrinterError: Error {
+    case outOfPaper
+    case noToner
+    case onFire
+}
+
+///错误处理 Error 协议
+//抛出异常
+func send(job: Int, toPrinter printerName: String) throws -> String {
+    if printerName == "Never Has Toner" {
+        throw PrinterError.noToner
+    }
+    
+        defer {//执行在  print("what the hell2"); 之后
+            print("what the hell");
+        }//defer代码块来表示在函数返回前，函数中最后执行的代码。无论函数是否会抛出错误，这段代码都将执行。 类比于finally
+        print("what the hell2");
+   
+    
+    return "Job sent"
+}
+
+//try catch  演变为  do catch   且可以  do catch Error.a  catch Error.b.... 等
+//finally 类演变为 defer， 不同之处在于 defer 可以在任何地方写入，而不必在do catch 之后使用，且defer表示函数返回前，函数最后执行的代码
+
+//捕捉异常
+do {
+//    throw PrinterError.onFire;
+    // let aTry = try? send(job: 1, toPrinter: "sdasd");
+    let aTry = try send(job: 1, toPrinter: "sdasd");
+} catch PrinterError.noToner {
+    
+} catch {
+   print(error);
+}
+
+//泛型
+func repeatItem<Item/**/>(repeating item: Item/**/, numberOfTimes: Int) -> [Item/**/] {
+    var result = [Item]()//可变数组初始化， Item直接就是类型
+//    let result2 = ["Str"]();//会自定转类型？？？？
+//    let result3 = [String]();//会自定转类型？？？？
+    
+    for _ in 0..<numberOfTimes {//  _ 省略， numberOfTime
+        result.append(item)
+    }
+    return result
+}
+repeatItem(repeating: "Nike", numberOfTimes:4)
+
+
+//在类型名后面使用where来指定对类型的需求，比如，限定类型实现某一个协议，限定两个类型是相同的，或者限定某个类必须有一个特定的父类。
+
+func anyCommonElements<T: Sequence/*限定实现这个协议的对象*/, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
+    where T.Iterator.Element: Equatable, T.Iterator.Element == U.Iterator.Element {
+        for lhsItem in lhs {
+            for rhsItem in rhs {
+                if lhsItem == rhsItem {
+                    return true
+                }
+            }
+        }
+        return false
+}
+anyCommonElements([1, 2, 3], [3])
+
+//<T: Equatable>和<T> ... where T: Equatable>是等价的。
+let nine = 9;
+
+let ten = 10.0;
+let eleven : Float = 11;
+let `let` : Int = 2;
+
+let twelve : Int64 = 11;
+twelve.distance(to: 2)
+twelve.advanced(by: 1);
+Int64.max
+Int32.max
+
+let aTuple : (String, Int) = ("sadads", 1);
+let possibleNumber = "dd"
+let convertedNumber = Int(possibleNumber)
+
+var optiona : String? = nil;
+let optiona2 = optiona;
+
+let saaaa : String? = nil;
+
+assert(true);
+
 
 
 
