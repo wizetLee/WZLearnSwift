@@ -524,5 +524,93 @@ let saaaa : String? = nil;
 assert(true);
 
 
+for tmp in 1..<10 {
+    print(String(tmp));
+}
+
+for tmp in 1...10 {
+    print(String(tmp))
+}
+
+
+let (x, y) = (1, 2)
+x
+y
+
+let character : Character = "!"
+var characterArr : [Character] = ["!", "!", "!", "!"]
+
+characterArr.append("1");
+var aStr : String = "I'am a string";
+aStr.append("!");
+aStr.append("append an other string\u{1112}\u{1161}\u{11AB}");
+aStr.appending("asds");
+aStr
+
+let precomposed: Character = "\u{D55C}"                  // 한
+let decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // ᄒ, ᅡ, ᆫ
+// precomposed 是 한, decomposed 是 한
+
+aStr.characters.count;
+
+aStr.startIndex
+aStr.endIndex
+aStr.index(after: aStr.startIndex);
+
+aStr[aStr.index(aStr.endIndex, offsetBy:-1)];
+aStr[aStr.startIndex]
+
+
+let greetings = "Guten Tag!\u{1112}\u{1161}\u{11AB}"
+greetings[greetings.startIndex]
+// G
+greetings[greetings.index(before: greetings.endIndex)]
+// !
+greetings[greetings.index(after: greetings.startIndex)]
+// u
+let index = greetings.index(greetings.startIndex, offsetBy: 7)
+greetings[index]
+// a
+
+
+for index in greetings.characters.indices {
+    print("\(greetings[index]) ", terminator: "")
+}
+// 打印输出 "G u t e n   T a g ! "
+var welcome = "hello"
+welcome.insert("!", at: welcome.endIndex)
+// welcome 变量现在等于 "hello!"
+
+welcome.insert(contentsOf:" there".characters, at: welcome.index(before: welcome.endIndex))
+// welcome 变量现在等于 "hello there!"
+
+welcome.insert(contentsOf: "jajaj".characters, at: welcome.startIndex);
+
+// welcome 现在等于 "hello there"
+
+let range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
+welcome.removeSubrange(range)
+// welcome 现在等于 "hello"
+let dogString = "Dog‼🐶"
+dogString.unicodeScalars
+dogString.utf8
+print("\n")
+for codeUnit in dogString.utf8 {
+    print("\(codeUnit) ", terminator: "")
+}
+print("")
+// 68 111 103 226 128 188 240 159 144 182
+for codeUnit in dogString.utf16 {
+    print("\(codeUnit) ", terminator: "")
+}
+print("")
+// 68 111 103 226 128 188 240 159 144 182
+
+// 68 111 103 226 128 188 240 159 144 182
+for codeUnit in dogString.unicodeScalars {
+    print("\(codeUnit) ", terminator: "")
+}
+print("")
+// 68 111 103 226 128 188 240 159 144 182
 
 
