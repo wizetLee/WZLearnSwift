@@ -614,3 +614,254 @@ print("")
 // 68 111 103 226 128 188 240 159 144 182
 
 
+var myArr : Array = ["1", "2", "3"];
+myArr.count;
+var myArr2 = myArr;
+myArr.removeLast();
+myArr.removeFirst();
+myArr2;
+for (index, value) in myArr2.enumerated() {
+    print("Item \(String(index + 1)): \(value)")
+}
+
+var mySet : Set = ["a1",  "a2", "a3", "a4"];
+mySet.contains("1");
+//mySet.removeFirst();
+mySet.sorted();
+let aCharacter = "a"
+
+switch aCharacter {
+case "1", "a", "A":
+    print("type 1");
+default:
+    print("type 2");
+}
+
+var yetAnotherPoint = (1, -1)
+switch yetAnotherPoint {
+case let (x, y) where x == y:
+    print("(\(x), \(y)) is on the line x == y")
+case let (x, y) where x == -y:
+    print("(\(x), \(y)) is on the line x == -y")
+case let (x, y):
+    print("(\(x), \(y)) is just some arbitrary point")
+}
+
+if #available(iOS 10, *) {
+    // 在 iOS 使用 iOS 10 的 API, 在 macOS 使用 macOS 10.12 的 API
+    print("juice");
+} else {
+    // 使用先前版本的 iOS 和 macOS 的 API
+}
+
+func aFunc (parameterA :inout String, ParameterB : String = "aaaa") -> () {
+    parameterA = "AAAA";
+}
+
+var ssstrA  = "aa";
+var ssstrB  = "bb";
+
+aFunc(parameterA: &ssstrA, ParameterB: ssstrB)
+ssstrA;
+
+func arithmeticMean(_ numbers: Double...) -> Double {
+    var total: Double = 0
+    for number in numbers {
+        total += number
+    }
+    return total / Double(numbers.count)
+}
+
+
+var aFuncType : (Int, Int) -> Int;
+
+var customArray = ["A", "B", "C", "a", "100"];
+
+customArray.sort { $0 >  $1}
+
+customArray.sort(by: {(tmp1: String, tmp2 : String) -> Bool in return tmp1 > tmp2});
+
+customArray.sort { (tmp1, tmp2) -> Bool in
+    return tmp2 > tmp1;
+}
+customArray
+
+customArray.sort (by: > );
+func someFunctionThatTakesAClosure(closure: (_ tm :String)-> Void, closure2: () -> Void) {
+    // 函数体部分
+}
+let ssssssssss = "aaaaa"
+someFunctionThatTakesAClosure(closure: { (<#String#>) in
+    
+}) { 
+    
+}
+
+func someFunctionThatTakesAClosure(closure: () -> Void) {
+    // 函数体部分
+    print("函数体");
+}
+
+// 以下是不使用尾随闭包进行函数调用
+someFunctionThatTakesAClosure(closure: {})
+
+// 以下是使用尾随闭包进行函数调用
+someFunctionThatTakesAClosure(){}
+
+
+
+let digitNames = [
+    0: "Zero", 1: "One", 2: "Two",   3: "Three", 4: "Four",
+    5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
+]
+let numberss = [16, 58, 510]
+
+let strings = numbers.map {
+    (number) -> String in
+    var number = number
+    var output = ""
+    repeat {
+        output = digitNames[number % 10]! + output
+        number /= 10
+    } while number > 0
+    return output
+}
+print(strings);
+
+func makeIncrementer(forIncrement amount: Int) -> (() -> Int) {
+    var runningTotal = 0
+    func incrementer() -> Int {
+        runningTotal += amount
+        return runningTotal
+    }
+    return incrementer
+}
+let t: () -> Int = makeIncrementer(forIncrement: 10);
+t();
+t();
+
+
+var digitArr = [1, 2, 3];
+let digitArrMap = digitArr.map { (tmp) in
+    return String(tmp);
+}
+
+var completionHandlers: [() -> Void] = []
+func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+    completionHandlers.append(completionHandler)
+}
+
+
+
+
+func someFunctionWithNonescapingClosure(closure: () -> Void) {
+    closure()
+}
+
+
+
+class aClass {
+    var x = 10;
+    func doSomething() {
+        someFunctionWithEscapingClosure { self.x = 100 }
+        someFunctionWithNonescapingClosure { x = 200 }
+    }
+    
+}
+let instance = aClass();
+instance.doSomething();
+instance.x;
+
+enum compassPoint {
+    case south
+    case north
+    case west
+    case east
+}
+
+compassPoint.east
+let ccc : compassPoint = .west;
+
+
+switch ccc {
+case .east:
+    print("2");
+case .north:
+    print("3");
+case .west:
+    print("4");
+case .south:
+    print("5");
+}
+
+enum Barcode {
+    case upc(Int, Int, Int, Int)
+    case qrCode(String)
+}
+var productBarcode = Barcode.upc(8, 85909, 51226, 3)
+
+switch productBarcode {
+case .upc(let numberSystem, let manufacturer, let product, let check):
+    print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).")
+case .qrCode(let productCode):
+    print("QR code: \(productCode).")
+}
+//
+
+
+enum ASCIIControlCharacter: Character {
+    case tab = "\t"
+    case lineFeed = "\n"
+    case carriageReturn = "\r"
+}
+
+enum integerEnum : Int {
+    case one = 1
+    case two = 2
+    case three = 3
+}
+
+integerEnum.one.rawValue
+integerEnum(rawValue: 3);
+
+struct FixedLengthRange {
+    var firstValue: Int
+    let length: Int
+}
+var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
+// 该区间表示整数0，1，2
+rangeOfThreeItems.firstValue = 6
+
+
+struct SomeStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+enum SomeEnumeration {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 6
+    }
+}
+class SomeClass {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 27
+    }
+    var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+    
+     func entity()  {
+        
+    }
+}
+
+class SomeClass2 : SomeClass {
+    override var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+    
+}
