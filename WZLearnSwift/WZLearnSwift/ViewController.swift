@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     var myLabel:UILabel? //申明一个全局变量？表示初始值为空
     override func viewDidLoad() {
         super.viewDidLoad()//是基类其中有的 必须写个keyword
+        
+        
+        
         self.automaticallyAdjustsScrollViewInsets = false;
         var  arr : Array<String> = [];
         arr = ["1", "2", "3"];
@@ -117,6 +120,23 @@ class ViewController: UIViewController {
     }
     let ace = Rank.Ace
 //    let aceRawValue = ace.rawValue//playground 是可以的。。。
+    
+    
+    
+    class Person {
+        let name: String
+        init(name: String) {
+            self.name = name
+            print("\(name) is being initialized")
+        }
+        deinit {
+            print("\(name) is being deinitialized")
+            
+        }
+    }
+    
+
+    
     
     
 }

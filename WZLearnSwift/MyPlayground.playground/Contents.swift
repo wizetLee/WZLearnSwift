@@ -854,6 +854,7 @@ class SomeClass {
         return 107
     }
     
+  
      func entity()  {
         
     }
@@ -864,4 +865,96 @@ class SomeClass2 : SomeClass {
         return 107
     }
     
+}
+
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps) {
+            print("About to set totalSteps to \(newTotalSteps)")
+        }
+        didSet {
+            if totalSteps > oldValue  {
+                print("Added \(totalSteps - oldValue) steps")
+            }
+        }
+    }
+    
+    init() {
+    }
+    
+   
+    
+    init(yell: String) {
+        print("\(yell)")
+    }
+    
+    convenience init(y: Double) {
+        self.init()
+        self.totalSteps = 1000;
+    }
+    init? (personName: String) {
+      
+        return nil;
+    }
+    
+}
+
+
+class StepCounter2 : StepCounter {
+    override init(personName: String) {
+        super.init();
+        
+    }
+}
+
+let ssStepCounter = StepCounter(yell: "haha")
+let sssStepCounter = StepCounter(personName: "1");
+let ssssssssssssssssssss = StepCounter(y: 1);
+ssssssssssssssssssss.totalSteps
+
+
+struct APoint  {
+    var x = 0.0;
+    var y = 0.0;
+    mutating func change() {
+        x = 10;
+        y = 20;
+    }
+    
+    static func thisIsAStaticFunc() {
+        print("thisIsAStaticFunc");
+    }
+    
+    subscript(index: Int) -> Int {
+        get {
+            // 返回一个适当的 Int 类型的值
+            return Int(self.x);
+        }
+        
+        set(newValue) {
+            // 执行适当的赋值操作
+        }
+    }
+    
+    
+}
+
+
+var aPoint : APoint = APoint(x: 1, y: 2);
+aPoint.x
+aPoint.change();
+aPoint.x
+
+var vPoint : APoint = APoint();
+vPoint.x
+APoint.thisIsAStaticFunc();
+
+var optionalStr : String?;
+print("\(optionalStr)")
+optionalStr?.isEmpty
+optionalStr = ""
+optionalStr?.isEmpty
+
+if var temp = optionalStr {
+    optionalStr = optionalStr! + "123"
 }
