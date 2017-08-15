@@ -958,3 +958,8 @@ optionalStr?.isEmpty
 if var temp = optionalStr {
     optionalStr = optionalStr! + "123"
 }
+
+let values = "abcdefg"
+let startSlicingIndex = values.index(values.startIndex, offsetBy: 3)
+let subvalues = values[startSlicingIndex..<values.endIndex]
+
