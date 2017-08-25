@@ -955,11 +955,12 @@ optionalStr?.isEmpty
 optionalStr = ""
 optionalStr?.isEmpty
 
-if var temp = optionalStr {
+if optionalStr != nil {
     optionalStr = optionalStr! + "123"
 }
 
 let values = "abcdefg"
 let startSlicingIndex = values.index(values.startIndex, offsetBy: 3)
 let subvalues = values[startSlicingIndex..<values.endIndex]
+let aNumberValue : String = "36.14"
 
