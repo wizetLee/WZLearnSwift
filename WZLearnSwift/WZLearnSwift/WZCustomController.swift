@@ -14,7 +14,7 @@ class WZCustomController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         self.view.backgroundColor = UIColor.white;//类方法
-        self.view.backgroundColor = UIColor(colorLiteralRed: 0.2, green: 0.2, blue: 0.2, alpha: 1.0);
+        self.view.backgroundColor = UIColor(red: 0.25, green: 0.3, blue: 0.4, alpha: 1.0);
         self.automaticallyAdjustsScrollViewInsets = false;
         
 //        let flowLayout = 
