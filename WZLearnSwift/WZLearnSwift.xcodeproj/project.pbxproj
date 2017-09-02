@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40027C571F5A38B2002A0FCF /* WZBaseAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40027C561F5A38B2002A0FCF /* WZBaseAlert.swift */; };
+		40027C591F5A3970002A0FCF /* WZToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40027C581F5A3970002A0FCF /* WZToast.swift */; };
 		403DE7381EF8195A0059711D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403DE7371EF8195A0059711D /* AppDelegate.swift */; };
 		403DE73A1EF8195A0059711D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403DE7391EF8195A0059711D /* ViewController.swift */; };
 		403DE73D1EF8195A0059711D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403DE73B1EF8195A0059711D /* Main.storyboard */; };
@@ -14,11 +16,14 @@
 		403DE7421EF8195A0059711D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403DE7401EF8195A0059711D /* LaunchScreen.storyboard */; };
 		403DE74D1EF8195A0059711D /* WZLearnSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403DE74C1EF8195A0059711D /* WZLearnSwiftTests.swift */; };
 		403DE7581EF8195A0059711D /* WZLearnSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403DE7571EF8195A0059711D /* WZLearnSwiftUITests.swift */; };
+		404A409A1F5A8E21007F2AE2 /* WZAlert1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A40991F5A8E21007F2AE2 /* WZAlert1.swift */; };
 		409C7EF11F51547B00D0246A /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C7EF01F51547B00D0246A /* TableViewVC.swift */; };
 		409C7EF61F51549D00D0246A /* BCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 409C7EF21F51549C00D0246A /* BCustomTableViewCell.xib */; };
 		409C7EF71F51549D00D0246A /* BCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C7EF31F51549C00D0246A /* BCustomTableViewCell.swift */; };
 		409C7EF81F51549D00D0246A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C7EF41F51549D00D0246A /* CustomTableViewCell.swift */; };
 		409C7EF91F51549D00D0246A /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 409C7EF51F51549D00D0246A /* CustomTableViewCell.xib */; };
+		40F9AFA81F59B2B900BDCCE1 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9AFA71F59B2B900BDCCE1 /* ToastViewController.swift */; };
+		40F9AFAA1F59B3F300BDCCE1 /* WZBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9AFA91F59B3F300BDCCE1 /* WZBaseViewController.swift */; };
 		8438C8581F307B90006071F8 /* WZCustomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438C8571F307B90006071F8 /* WZCustomController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40027C561F5A38B2002A0FCF /* WZBaseAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZBaseAlert.swift; sourceTree = "<group>"; };
+		40027C581F5A3970002A0FCF /* WZToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZToast.swift; sourceTree = "<group>"; };
 		403DE7341EF8195A0059711D /* WZLearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403DE7371EF8195A0059711D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		403DE7391EF8195A0059711D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,11 +60,14 @@
 		403DE7531EF8195A0059711D /* WZLearnSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZLearnSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		403DE7571EF8195A0059711D /* WZLearnSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZLearnSwiftUITests.swift; sourceTree = "<group>"; };
 		403DE7591EF8195A0059711D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404A40991F5A8E21007F2AE2 /* WZAlert1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZAlert1.swift; sourceTree = "<group>"; };
 		409C7EF01F51547B00D0246A /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
 		409C7EF21F51549C00D0246A /* BCustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCustomTableViewCell.xib; sourceTree = "<group>"; };
 		409C7EF31F51549C00D0246A /* BCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCustomTableViewCell.swift; sourceTree = "<group>"; };
 		409C7EF41F51549D00D0246A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		409C7EF51F51549D00D0246A /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		40F9AFA71F59B2B900BDCCE1 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
+		40F9AFA91F59B3F300BDCCE1 /* WZBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZBaseViewController.swift; sourceTree = "<group>"; };
 		8438C8571F307B90006071F8 /* WZCustomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WZCustomController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +122,8 @@
 				403DE7371EF8195A0059711D /* AppDelegate.swift */,
 				403DE7391EF8195A0059711D /* ViewController.swift */,
 				8438C8571F307B90006071F8 /* WZCustomController.swift */,
+				40F9AFA91F59B3F300BDCCE1 /* WZBaseViewController.swift */,
+				40F9AFA61F59B29500BDCCE1 /* ToastViewController */,
 				409C7EEF1F51546100D0246A /* TableViewVC */,
 				403DE73B1EF8195A0059711D /* Main.storyboard */,
 				403DE73E1EF8195A0059711D /* Assets.xcassets */,
@@ -149,6 +161,17 @@
 				409C7EF01F51547B00D0246A /* TableViewVC.swift */,
 			);
 			path = TableViewVC;
+			sourceTree = "<group>";
+		};
+		40F9AFA61F59B29500BDCCE1 /* ToastViewController */ = {
+			isa = PBXGroup;
+			children = (
+				40F9AFA71F59B2B900BDCCE1 /* ToastViewController.swift */,
+				40027C561F5A38B2002A0FCF /* WZBaseAlert.swift */,
+				404A40991F5A8E21007F2AE2 /* WZAlert1.swift */,
+				40027C581F5A3970002A0FCF /* WZToast.swift */,
+			);
+			path = ToastViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,23 +237,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = wizet;
 				TargetAttributes = {
 					403DE7331EF8195A0059711D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7MUPB6659U;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					403DE7471EF8195A0059711D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7MUPB6659U;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 403DE7331EF8195A0059711D;
 					};
 					403DE7521EF8195A0059711D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7MUPB6659U;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 403DE7331EF8195A0059711D;
 					};
@@ -290,12 +316,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F9AFAA1F59B3F300BDCCE1 /* WZBaseViewController.swift in Sources */,
+				40027C571F5A38B2002A0FCF /* WZBaseAlert.swift in Sources */,
+				404A409A1F5A8E21007F2AE2 /* WZAlert1.swift in Sources */,
+				40F9AFA81F59B2B900BDCCE1 /* ToastViewController.swift in Sources */,
 				409C7EF81F51549D00D0246A /* CustomTableViewCell.swift in Sources */,
 				409C7EF11F51547B00D0246A /* TableViewVC.swift in Sources */,
 				8438C8581F307B90006071F8 /* WZCustomController.swift in Sources */,
 				403DE73A1EF8195A0059711D /* ViewController.swift in Sources */,
 				403DE7381EF8195A0059711D /* AppDelegate.swift in Sources */,
 				409C7EF71F51549D00D0246A /* BCustomTableViewCell.swift in Sources */,
+				40027C591F5A3970002A0FCF /* WZToast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +391,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -368,7 +401,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -411,7 +448,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -419,7 +458,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -455,7 +498,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wizet.learn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -469,7 +513,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wizet.learn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -483,7 +528,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wz.WZLearnSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WZLearnSwift.app/WZLearnSwift";
 			};
 			name = Debug;
@@ -498,7 +544,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wz.WZLearnSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WZLearnSwift.app/WZLearnSwift";
 			};
 			name = Release;
@@ -513,7 +560,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wz.WZLearnSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = WZLearnSwift;
 			};
 			name = Debug;
@@ -528,7 +576,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wz.WZLearnSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = WZLearnSwift;
 			};
 			name = Release;

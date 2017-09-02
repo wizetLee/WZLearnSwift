@@ -8,9 +8,12 @@
 
 import UIKit
 
-class TableViewVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate
+
+
+class TableViewVC: WZBaseViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate
 {
     var dataSourceArr : [Dictionary<String , String>] = [];
+    
     
     override func viewDidLoad()
     {
@@ -33,14 +36,12 @@ class TableViewVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         ];
         dataSourceArr.append(dat1);
         
-        
-        
     }
     
     
     func createViews()
     {
-        self.automaticallyAdjustsScrollViewInsets = false;
+        
         self.title = "你是猪吗"
         let tableY : CGFloat = (self.navigationController?.navigationBar.frame.origin.y ?? 0) + (self.navigationController?.navigationBar.frame.size.height ?? 0) ;
         

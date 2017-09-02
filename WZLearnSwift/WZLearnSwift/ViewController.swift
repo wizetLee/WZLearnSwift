@@ -11,33 +11,41 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableViewVCBtn: UIButton!
+    @IBOutlet weak var toastVCBtn: UIButton!
     
     var clickCount:Int = 0;//clickCount 并没有声明为int
     
     override func viewDidLoad() {
-        super.viewDidLoad()//是基类其中有的 必须写个keyword
+        super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false;
         
-        let sel : Selector = #selector(clickMe(sender:))
+        let sel : Selector = #selector(clickMe(sender : ))
         tableViewVCBtn .addTarget(self, action: sel, for: UIControlEvents.touchUpInside);
         tableViewVCBtn.layer.borderColor = UIColor.black.cgColor;
         tableViewVCBtn.layer.borderWidth = 1.0;
         
-        
+        toastVCBtn.addTarget(self, action: sel, for: .touchUpInside)
+        toastVCBtn.layer.borderColor = UIColor.black.cgColor;
+        toastVCBtn.layer.borderWidth = 1.0;
         
     }
     
-    
     //定义一个点击事件的函数
-    func clickMe(sender:UIButton) {
+    @objc func clickMe(sender:UIButton) {
         clickCount += 1;
-  
-        self.navigationController?.pushViewController(TableViewVC(), animated: true);
+        if sender == self.tableViewVCBtn {
+           self.navigationController?.pushViewController(TableViewVC(), animated: true);
+        } else if (sender == self.toastVCBtn) {
+            self.navigationController?.pushViewController(ToastViewController(), animated: true);
+            
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     
     enum Rank: Int {
