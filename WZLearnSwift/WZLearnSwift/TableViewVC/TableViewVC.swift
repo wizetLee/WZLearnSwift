@@ -41,12 +41,11 @@ class TableViewVC: WZBaseViewController, UITableViewDelegate, UITableViewDataSou
     
     func createViews()
     {
-        
         self.title = "你是猪吗"
-        let tableY : CGFloat = (self.navigationController?.navigationBar.frame.origin.y ?? 0) + (self.navigationController?.navigationBar.frame.size.height ?? 0) ;
-        
-        let table : UITableView = UITableView(frame: CGRect(x:0.0, y:tableY, width:UIScreen.main.bounds.size.width, height:UIScreen.main.bounds.size.height - tableY) , style: UITableViewStyle.plain);
+ 
+        let table : UITableView = UITableView(frame: CGRect(x:0.0, y:self.subViewsOrigionY, width:UIScreen.main.bounds.size.width, height:UIScreen.main.bounds.size.height - self.subViewsOrigionY) , style: UITableViewStyle.plain);
         self.view.addSubview(table);
+        
         table.backgroundColor = UIColor.green;
         table.delegate = self
         table.dataSource = self;

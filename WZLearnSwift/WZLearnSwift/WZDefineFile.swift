@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+// MARK: - 常量区
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
+
+let isIPad : Bool = (UI_USER_INTERFACE_IDIOM() == .pad)
+let currentVersion = UIDevice.current.systemVersion
 

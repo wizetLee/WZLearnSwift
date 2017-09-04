@@ -36,9 +36,12 @@ class WZBaseAlert: UIView {
     }()
     
     @objc func tap(sender : UITapGestureRecognizer) {
-        self.alertDismiss(animation: true);
+        if clickedBackgroundToDismiss {
+            self.alertDismiss(animation: true);
+        }
     }
     
+// MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -52,6 +55,7 @@ class WZBaseAlert: UIView {
         self.displayType = displayType;
     }
     
+    // MARK: - Private Method
     deinit {
         print("deinit")
     }
@@ -146,6 +150,32 @@ class WZBaseAlert: UIView {
         }
     }
     
+    func removeAllView() {
+        for view in self.bgView.subviews {
+            view.removeFromSuperview()
+        }
+        for view in self.bgAnimationView.subviews {
+            view.removeFromSuperview()
+        }
+        for view in self.subviews {
+            view.removeFromSuperview()
+        }
+        self.removeFromSuperview()
+    }
+    
+    override func addSubview(_ view: UIView) {
+        super.addSubview(view)
+        if view != self.bgView  && view != self.bgAnimationView {
+            if !self.bgAnimationView.subviews.contains(view) {
+                self.bgAnimationView.addSubview(view)
+            } else {
+                if !self.subviews.contains(view) {
+                    self.addSubview(view)
+                }
+            }
+        }
+    }
+    
     ///public
     ///开始动画时间
     func beginAnimatDuration() -> TimeInterval {
@@ -159,10 +189,14 @@ class WZBaseAlert: UIView {
     func bgViewColor() -> UIColor {
         return UIColor.black.withAlphaComponent(0.25)
     }
+    
+   
     func bgViewAlpha() -> CGFloat {
         return 1.0
     }
     
+    
+   // MARK: - Public Method
     func alertContent() {}
     
     func alertShow() {
@@ -193,30 +227,6 @@ class WZBaseAlert: UIView {
         }
     }
     
-    func removeAllView() {
-        for view in self.bgView.subviews {
-            view.removeFromSuperview()
-        }
-        for view in self.bgAnimationView.subviews {
-            view.removeFromSuperview()
-        }
-        for view in self.subviews {
-            view.removeFromSuperview()
-        }
-        self.removeFromSuperview()
-    }
-    
-    override func addSubview(_ view: UIView) {
-        super.addSubview(view)
-        if view != self.bgView  && view != self.bgAnimationView {
-            if !self.bgAnimationView.subviews.contains(view) {
-                self.bgAnimationView.addSubview(view)
-            } else {
-                if !self.subviews.contains(view) {
-                    self.addSubview(view)
-                }
-            }
-        }
-    }
+  
     
 }

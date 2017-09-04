@@ -8,20 +8,16 @@
 
 import UIKit
 
-class ToastViewController: WZBaseViewController {
+class ToastViewController: WZBaseViewController, WZAlert1Protocol {
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let screenW = UIScreen.main.bounds.size.width
         _ = UIScreen.main.bounds.size.height
         
         let btnH : CGFloat = 44.0;
-        
-        let Y : CGFloat = (self.navigationController?.navigationBar.frame.origin.y ?? 0) + (self.navigationController?.navigationBar.frame.size.height ?? 0) ;
         for number in 0..<10 {
-            let rect = CGRect(x: 0.0, y: Y + btnH * CGFloat(number), width: screenW, height: btnH)
+            let rect = CGRect(x: 0.0, y: self.subViewsOrigionY + btnH * CGFloat(number), width: screenW, height: btnH)
             let btn : UIButton = UIButton(frame: rect)
             btn.setTitle("\(number)", for: .normal)
             btn.setTitleColor(UIColor.blue, for: .normal)
@@ -35,10 +31,15 @@ class ToastViewController: WZBaseViewController {
     }
 
     
+    ///denegate
+    func alertHasBeenClicked(alert: WZAlert1) {
+        alert.alertDismiss(animation: true)
+    }
     @objc func clickedBtn(sender : UIButton){
         switch sender.tag {
             case 0:
                 let alert : WZAlert1 = WZAlert1()
+                alert.delegate = self
                 alert.alertShow()
                 break
             case 1:print("\(sender.tag)")

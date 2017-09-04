@@ -17,6 +17,7 @@
 		403DE74D1EF8195A0059711D /* WZLearnSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403DE74C1EF8195A0059711D /* WZLearnSwiftTests.swift */; };
 		403DE7581EF8195A0059711D /* WZLearnSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403DE7571EF8195A0059711D /* WZLearnSwiftUITests.swift */; };
 		404A409A1F5A8E21007F2AE2 /* WZAlert1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A40991F5A8E21007F2AE2 /* WZAlert1.swift */; };
+		40726D271F5D93740018E4A1 /* WZDeviceHardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40726D261F5D93740018E4A1 /* WZDeviceHardware.swift */; };
 		409C7EF11F51547B00D0246A /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C7EF01F51547B00D0246A /* TableViewVC.swift */; };
 		409C7EF61F51549D00D0246A /* BCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 409C7EF21F51549C00D0246A /* BCustomTableViewCell.xib */; };
 		409C7EF71F51549D00D0246A /* BCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C7EF31F51549C00D0246A /* BCustomTableViewCell.swift */; };
@@ -62,6 +63,7 @@
 		403DE7571EF8195A0059711D /* WZLearnSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZLearnSwiftUITests.swift; sourceTree = "<group>"; };
 		403DE7591EF8195A0059711D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		404A40991F5A8E21007F2AE2 /* WZAlert1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZAlert1.swift; sourceTree = "<group>"; };
+		40726D261F5D93740018E4A1 /* WZDeviceHardware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZDeviceHardware.swift; sourceTree = "<group>"; };
 		409C7EF01F51547B00D0246A /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
 		409C7EF21F51549C00D0246A /* BCustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCustomTableViewCell.xib; sourceTree = "<group>"; };
 		409C7EF31F51549C00D0246A /* BCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				8438C8571F307B90006071F8 /* WZCustomController.swift */,
 				40F9AFA91F59B3F300BDCCE1 /* WZBaseViewController.swift */,
 				40A002AE1F5AEFA4003A3019 /* WZDefineFile.swift */,
+				40726D261F5D93740018E4A1 /* WZDeviceHardware.swift */,
 				40F9AFA61F59B29500BDCCE1 /* ToastViewController */,
 				409C7EEF1F51546100D0246A /* TableViewVC */,
 				403DE73B1EF8195A0059711D /* Main.storyboard */,
@@ -323,6 +326,7 @@
 				40A002AF1F5AEFA4003A3019 /* WZDefineFile.swift in Sources */,
 				40027C571F5A38B2002A0FCF /* WZBaseAlert.swift in Sources */,
 				404A409A1F5A8E21007F2AE2 /* WZAlert1.swift in Sources */,
+				40726D271F5D93740018E4A1 /* WZDeviceHardware.swift in Sources */,
 				40F9AFA81F59B2B900BDCCE1 /* ToastViewController.swift in Sources */,
 				409C7EF81F51549D00D0246A /* CustomTableViewCell.swift in Sources */,
 				409C7EF11F51547B00D0246A /* TableViewVC.swift in Sources */,
