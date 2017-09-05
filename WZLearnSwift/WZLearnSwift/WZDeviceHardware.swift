@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 
-
-
 // MARK: - UIViewController extension
 extension UIViewController {
     
@@ -21,5 +19,6 @@ extension UIViewController {
             return(self.navigationController?.navigationBar.frame.origin.y ?? 0) + (self.navigationController?.navigationBar.frame.size.height ?? 0)
         }
     }
-
+   
+    
 }

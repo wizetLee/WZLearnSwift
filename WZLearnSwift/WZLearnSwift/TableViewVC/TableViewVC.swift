@@ -126,7 +126,7 @@ class TableViewVC: WZBaseViewController, UITableViewDelegate, UITableViewDataSou
         
         tableCell?.selectionStyle = .none;
         
-        return tableCell!;
+        return tableCell!
     }
     
     //貌似只能使用XIB了...
