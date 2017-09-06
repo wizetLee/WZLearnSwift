@@ -48,8 +48,6 @@ class JSONViewController: WZBaseViewController {
            
         }
         
-       
-        
         
     }
 

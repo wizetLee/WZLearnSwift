@@ -24,6 +24,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
             ["title" : TableViewVC.classForCoder()],
             ["title" : ToastViewController.classForCoder()],
             ["title" : JSONViewController.classForCoder()],
+            ["title" : ClosureViewController.classForCoder()],
                 ];
         }();
     
