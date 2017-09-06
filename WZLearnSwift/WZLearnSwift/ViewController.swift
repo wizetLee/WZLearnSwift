@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, MyRenamedProtocol {
     
     @IBOutlet weak var tableViewVCBtn: UIButton!
     @IBOutlet weak var toastVCBtn: UIButton!
@@ -51,7 +51,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         JSONBtn.layer.borderWidth = 1.0;
     }
     
-    // mark: - delegate
+    // MARK: - delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.datas.count
         
@@ -70,7 +70,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let str : AnyClass  =  self.datas[indexPath.row]["title"]!
-        
+        print(str.description())
         guard  ((str as? UIViewController.Type) != nil) else {
             return
         }
@@ -86,11 +86,8 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
          let cls = NSClassFromString(clsName)as! UIViewController.Type
          let vc = cls.init()
          */
-        
-        
         if ((str as? UIViewController.Type) != nil)  {
             self.navigationController?.pushViewController((str as! UIViewController.Type).init(), animated: true)
-            print(".....................................")
         }
     }
     
@@ -134,7 +131,6 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
 //    let aceRawValue = ace.rawValue//playground 是可以的。。。
     
     
-    
     class Person {
         let name: String
         init(name: String) {
@@ -146,6 +142,27 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
             
         }
     }
+    
+    
 }
 
+
+/**
+ renamed 参数用来提供文本信息，用以表示被重命名的声明的新名字。当使用声明的旧名字时，编译器会报错提示新名字。格式如下：
+ renamed=新名字
+ 新名字由一个字符串构成。
+ 你可以将renamed 参数和 unavailable 参数以及类型别名声明组合使用，以此向用户表示某个声明已经被重命名。当某个声明的名字在一个框架或者库的不同发布版本间发生变化时，这会相当有用。
+ */
+
+//// 首发版本
+//protocol MyProtocol {
+//    // 这里是协议定义
+//}
+// 后续版本重命名了 MyProtocol
+protocol MyRenamedProtocol {
+    // 这里是协议定义
+}
+// MARK: -  不可重命名 "MyRenamedProtocol"  因此 别名的定义无效!!!!
+@available(*, unavailable, renamed:"MyRenamedProtocol")
+typealias MyProtocol = MyRenamedProtocol   //别名
 

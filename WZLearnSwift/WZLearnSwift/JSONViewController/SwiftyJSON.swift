@@ -163,9 +163,12 @@ public struct JSON {
 	
 	 - returns: The created JSON
 	 */
+    
+    // MARK: - 文件内私有，只能在当前源文件使用
     fileprivate init(jsonObject: Any) {
         self.object = jsonObject
     }
+    
 
 	/**
 	 Merges another JSON into this JSON, whereas primitive values which are not present in this JSON are getting added,
@@ -282,9 +285,29 @@ public struct JSON {
     }
 
     /// The static null JSON
+    // MARK: - 将 available 特性用于声明时，表示该声明的生命周期与特定的平台和操作系统版本有关。
+    // MARK: - * 用于指定在所有其它平台中
+    /** 其它平台
+     iOS
+     iOSApplicationExtension
+     macOS
+     macOSApplicationExtension
+     watchOS
+     watchOSApplicationExtension
+     tvOS
+     tvOSApplicationExtension
+     
+     PS:
+         unavailable参数表示该声明在指定的平台上是无效的
+         introduced 参数表示指定平台从哪一版本开始引入该声明  格式： introduced=版本号
+     */
+    
+    // MARK: - 对所有的平台 不可重定义null
     @available(*, unavailable, renamed:"null")
+    
     public static var nullJSON: JSON { return null }
     public static var null: JSON { return JSON(NSNull()) }
+  
 }
 
 // unwrap nested JSON
