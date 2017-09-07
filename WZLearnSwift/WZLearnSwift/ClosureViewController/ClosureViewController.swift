@@ -8,8 +8,14 @@
 
 import UIKit
 
+typealias blankClosure = (() -> Void)
+
 class ClosureViewController: WZBaseViewController {
 
+    var ten = 10
+    
+    var instanceClosure: blankClosure?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -108,6 +114,42 @@ class ClosureViewController: WZBaseViewController {
             print(callBackUTFStrCount!("～"))
             print("-------------------------------------------")
         }
+        
+        // MARK: - 闭包在函数调用之后才执行的成为逃逸闭包。参数名之前标注 @escaping，指明这个闭包是允许“逃逸”出这个函数、
+        
+        var closures : [(() -> Void)] = [];//闭包鼠数组
+        
+        //接受一个闭包作为参数
+        func sumOfColsure( aColsure :  @escaping ()->Void )  {
+            closures.append(aColsure)
+            //            self.instanceClosure = aColsure
+            self.instanceClosure = aColsure
+        }
+        
+        func normalClosure (normal : () -> Void) {
+            normal()
+        }
+        print(ten);
+        normalClosure {
+            ten = 20;
+        }
+        
+        sumOfColsure(aColsure: {  self.ten = 100 });
+        print(ten);
+        //        closures.first?()
+        self.instanceClosure?()
+        print(ten);
+        
+        
+        //自动闭包 不带任何参数的闭包  @autoclosure
+        
+        //逃逸闭包通常不带返回值
+        //自动闭包通常包含返回值
+        //想让一个自动闭包可以“逃逸”，则应该同时使用 @autoclosure 和 @escaping 属性
+
+        
+        
+        
         
         
     }
