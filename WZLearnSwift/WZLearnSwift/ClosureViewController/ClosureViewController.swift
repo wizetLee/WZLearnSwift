@@ -92,6 +92,22 @@ class ClosureViewController: WZBaseViewController {
         print(func1())
         print(func1())
         
+        var callBackUTFStrCount: ((String) -> Int)?
+        callBackUTFStrCount = {(x:String) in return x.utf8.count}
+        if callBackUTFStrCount != nil {
+            print("-------------------------------------------")
+            print(callBackUTFStrCount!("❤️"))
+            print(callBackUTFStrCount!(" "))
+            print(callBackUTFStrCount!("(ˇˍˇ) ～"))
+            print(callBackUTFStrCount!("("))
+            print(callBackUTFStrCount!("ˇ"))
+            print(callBackUTFStrCount!("ˍ"))
+            print(callBackUTFStrCount!("ˇ"))
+            print(callBackUTFStrCount!(")"))
+            print(callBackUTFStrCount!(" "))
+            print(callBackUTFStrCount!("～"))
+            print("-------------------------------------------")
+        }
         
         
     }
