@@ -34,7 +34,7 @@ class JSONViewController: WZBaseViewController {
                 let json = try JSON(data: jsonData)   //JSON(data: jsonData)
                 if let number = json[0]["phones"][0]["number"].string {
                     // 找到电话号码
-                    print("第一个联系人的第一个电话号码：",number)
+                    print(number)
                 }
                 
                 if let number = json[10000].int {

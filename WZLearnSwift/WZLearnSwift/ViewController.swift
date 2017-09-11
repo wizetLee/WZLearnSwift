@@ -18,6 +18,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         return UITableView(frame: CGRect(x: 0.0, y: self.subViewsOrigionY, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - self.subViewsOrigionY));
     }();
     
+    //可以改为再映射的模式
     lazy var datas : [Dictionary<String, AnyClass>] = {
         //有命名空间！！！！！！
         return [
@@ -143,8 +144,6 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
             
         }
     }
-    
-    
 }
 
 

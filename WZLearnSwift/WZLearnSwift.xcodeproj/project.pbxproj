@@ -30,6 +30,8 @@
 		40F9AFA81F59B2B900BDCCE1 /* ToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9AFA71F59B2B900BDCCE1 /* ToastViewController.swift */; };
 		40F9AFAA1F59B3F300BDCCE1 /* WZBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9AFA91F59B3F300BDCCE1 /* WZBaseViewController.swift */; };
 		8438C8581F307B90006071F8 /* WZCustomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438C8571F307B90006071F8 /* WZCustomController.swift */; };
+		8468CCBF1F660FE400FE1B80 /* AlertTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468CCBE1F660FE400FE1B80 /* AlertTestView.swift */; };
+		8468CCC11F66100400FE1B80 /* AlertTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8468CCC01F66100400FE1B80 /* AlertTestView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		40F9AFA71F59B2B900BDCCE1 /* ToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewController.swift; sourceTree = "<group>"; };
 		40F9AFA91F59B3F300BDCCE1 /* WZBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZBaseViewController.swift; sourceTree = "<group>"; };
 		8438C8571F307B90006071F8 /* WZCustomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WZCustomController.swift; sourceTree = "<group>"; };
+		8468CCBE1F660FE400FE1B80 /* AlertTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTestView.swift; sourceTree = "<group>"; };
+		8468CCC01F66100400FE1B80 /* AlertTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertTestView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,8 @@
 		40F9AFA61F59B29500BDCCE1 /* ToastViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8468CCBE1F660FE400FE1B80 /* AlertTestView.swift */,
+				8468CCC01F66100400FE1B80 /* AlertTestView.xib */,
 				40F9AFA71F59B2B900BDCCE1 /* ToastViewController.swift */,
 				40027C561F5A38B2002A0FCF /* WZBaseAlert.swift */,
 				404A40991F5A8E21007F2AE2 /* WZAlert1.swift */,
@@ -321,6 +327,7 @@
 				403DE7421EF8195A0059711D /* LaunchScreen.storyboard in Resources */,
 				409C7EF61F51549D00D0246A /* BCustomTableViewCell.xib in Resources */,
 				403DE73F1EF8195A0059711D /* Assets.xcassets in Resources */,
+				8468CCC11F66100400FE1B80 /* AlertTestView.xib in Resources */,
 				409C7EF91F51549D00D0246A /* CustomTableViewCell.xib in Resources */,
 				403DE73D1EF8195A0059711D /* Main.storyboard in Resources */,
 			);
@@ -360,6 +367,7 @@
 				8438C8581F307B90006071F8 /* WZCustomController.swift in Sources */,
 				403DE73A1EF8195A0059711D /* ViewController.swift in Sources */,
 				4045B91D1F5EE8A800A28CCB /* JSONViewController.swift in Sources */,
+				8468CCBF1F660FE400FE1B80 /* AlertTestView.swift in Sources */,
 				403DE7381EF8195A0059711D /* AppDelegate.swift in Sources */,
 				409C7EF71F51549D00D0246A /* BCustomTableViewCell.swift in Sources */,
 				40027C591F5A3970002A0FCF /* WZToast.swift in Sources */,

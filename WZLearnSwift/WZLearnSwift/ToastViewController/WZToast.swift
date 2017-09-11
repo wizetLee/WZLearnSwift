@@ -149,7 +149,6 @@ class WZToast: UIView {
              相同层级的窗口，想让其中一个显示，可以用那个窗口的层级加上一个数
              */
             
-            
             if isWindowOnMainScreen && isWindowVisible && isWindowNormalLevel {
                 window = tmpWindow
                 break;
