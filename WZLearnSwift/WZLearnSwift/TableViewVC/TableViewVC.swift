@@ -41,8 +41,7 @@ class TableViewVC: WZBaseViewController, UITableViewDelegate, UITableViewDataSou
     
     func createViews()
     {
-        self.title = "你是猪吗"
- 
+        self.title = getLocalString(str: "你是猪吗")
         let table : UITableView = UITableView(frame: CGRect(x:0.0, y:self.subViewsOrigionY, width:UIScreen.main.bounds.size.width, height:UIScreen.main.bounds.size.height - self.subViewsOrigionY) , style: UITableViewStyle.plain);
         self.view.addSubview(table);
         
@@ -76,7 +75,7 @@ class TableViewVC: WZBaseViewController, UITableViewDelegate, UITableViewDataSou
             (tableCell as! BCustomTableViewCell).topLabel.text = String(indexPath.row)
             (tableCell as! BCustomTableViewCell).topLabel.backgroundColor = .yellow;
             
-            let tmpStr : String = "啦啦啊啦啦啦啦啦啦啦啦"
+            let tmpStr : String = getLocalString(str: "啦啦啊啦啦啦啦啦啦啦啦")
             var tmpStr2 : String = "";
             //for 循环
             for _ in 0...indexPath.row {

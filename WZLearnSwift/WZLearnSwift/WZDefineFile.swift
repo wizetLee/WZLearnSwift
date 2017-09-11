@@ -16,3 +16,9 @@ let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 let isIPad : Bool = (UI_USER_INTERFACE_IDIOM() == .pad)
 let currentVersion = UIDevice.current.systemVersion
 
+//#define LocalString(x) NSLocalizedString(x,nil)
+
+///获取国际化的字符串   Localizable
+func getLocalString(str :String) -> String {
+    return NSLocalizedString(str, comment: "Localizable");
+}
