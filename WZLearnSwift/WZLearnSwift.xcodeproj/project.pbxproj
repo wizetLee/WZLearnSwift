@@ -19,6 +19,7 @@
 		4045B91D1F5EE8A800A28CCB /* JSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045B91C1F5EE8A800A28CCB /* JSONViewController.swift */; };
 		4045B91F1F5EEB9E00A28CCB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045B91E1F5EEB9E00A28CCB /* SwiftyJSON.swift */; };
 		404711591F603D8300CB0C48 /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404711581F603D8300CB0C48 /* ClosureViewController.swift */; };
+		4049604D1F6963B8005462D4 /* CustomFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4049604C1F6963B8005462D4 /* CustomFontViewController.swift */; };
 		404A409A1F5A8E21007F2AE2 /* WZAlert1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A40991F5A8E21007F2AE2 /* WZAlert1.swift */; };
 		40726D271F5D93740018E4A1 /* WZDeviceHardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40726D261F5D93740018E4A1 /* WZDeviceHardware.swift */; };
 		409C7EF11F51547B00D0246A /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409C7EF01F51547B00D0246A /* TableViewVC.swift */; };
@@ -71,6 +72,7 @@
 		4045B91C1F5EE8A800A28CCB /* JSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewController.swift; sourceTree = "<group>"; };
 		4045B91E1F5EEB9E00A28CCB /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		404711581F603D8300CB0C48 /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
+		4049604C1F6963B8005462D4 /* CustomFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontViewController.swift; sourceTree = "<group>"; };
 		404A40991F5A8E21007F2AE2 /* WZAlert1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZAlert1.swift; sourceTree = "<group>"; };
 		40726D261F5D93740018E4A1 /* WZDeviceHardware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZDeviceHardware.swift; sourceTree = "<group>"; };
 		409C7EF01F51547B00D0246A /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				40F9AFA91F59B3F300BDCCE1 /* WZBaseViewController.swift */,
 				40A002AE1F5AEFA4003A3019 /* WZDefineFile.swift */,
 				40726D261F5D93740018E4A1 /* WZDeviceHardware.swift */,
+				4049604B1F69639B005462D4 /* CustomFontViewController */,
 				404711571F603D7300CB0C48 /* ClosureViewController */,
 				4045B91B1F5EE89500A28CCB /* JSONViewController */,
 				40F9AFA61F59B29500BDCCE1 /* ToastViewController */,
@@ -195,6 +198,14 @@
 				404711581F603D8300CB0C48 /* ClosureViewController.swift */,
 			);
 			path = ClosureViewController;
+			sourceTree = "<group>";
+		};
+		4049604B1F69639B005462D4 /* CustomFontViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4049604C1F6963B8005462D4 /* CustomFontViewController.swift */,
+			);
+			path = CustomFontViewController;
 			sourceTree = "<group>";
 		};
 		409C7EEF1F51546100D0246A /* TableViewVC */ = {
@@ -380,6 +391,7 @@
 				409C7EF11F51547B00D0246A /* TableViewVC.swift in Sources */,
 				8438C8581F307B90006071F8 /* WZCustomController.swift in Sources */,
 				403DE73A1EF8195A0059711D /* ViewController.swift in Sources */,
+				4049604D1F6963B8005462D4 /* CustomFontViewController.swift in Sources */,
 				4045B91D1F5EE8A800A28CCB /* JSONViewController.swift in Sources */,
 				8468CCBF1F660FE400FE1B80 /* AlertTestView.swift in Sources */,
 				403DE7381EF8195A0059711D /* AppDelegate.swift in Sources */,
