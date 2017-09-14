@@ -123,7 +123,6 @@ class JSONViewController: WZBaseViewController {
         self.automaticallyAdjustsScrollViewInsets = false;
         JSONAnalysis()
         
-        
         ///对象的编解码  直接用模型去编解码更方便 对象还要考虑继承的关系
         let b : B = B()
         b.name = "wizet"
@@ -131,6 +130,8 @@ class JSONViewController: WZBaseViewController {
         ///对对象的编码
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
+        encoder.dateEncodingStrategy = .secondsSince1970
+        
         let data = try! encoder.encode(b)
         print(String(data: data, encoding: .utf8)!)
         
@@ -147,12 +148,10 @@ class JSONViewController: WZBaseViewController {
     
     private func JSONAnalysis() {
         JSONAnalysisWithSystemAPI()
-        //使用系统的方法 貌似只有一个字段上的类型不匹配则会返回错误
+        //使用系统的方法 貌似只有一个字段上的类型不匹配都会返回错误。要求数据匹配比较精准
         
         JSONAnalysisWithThirdPartyAPI()
         //这个第三方的兼容性比较强吧，但是总是需要自己做类型检查， 简直了
-        
-        
     }
     
     // MARK: - 系统自带的解析JSON方式 JSON转自定义数据类型、自定义数据类型转为JSON
@@ -163,7 +162,7 @@ class JSONViewController: WZBaseViewController {
         do {
             let jd  = JSONDecoder()
             ///处理浮点类型 正无穷 负无穷 和 nan 类型的策略
-            jd.nonConformingFloatDecodingStrategy = .convertFromString(positiveInfinity: "+Infinity", negativeInfinity: "-Infinity", nan: "NaN")///没效果啊....
+            jd.nonConformingFloatDecodingStrategy = .convertFromString(positiveInfinity: "infinity", negativeInfinity: "-infinity", nan: "nan")///没效果啊....
             
             //缺点  如果有一个类型匹配错误的化就直接抛出错误
             let xiaoming = try jd.decode(XiaoMing.self, from: jsonStr1.data(using: .utf8)!)
@@ -196,7 +195,9 @@ class JSONViewController: WZBaseViewController {
             }
             
         } catch {
+//            error.localizedDescription
             print(error);
+            
         }
     }
     
