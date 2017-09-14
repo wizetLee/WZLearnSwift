@@ -360,6 +360,7 @@ public enum Index<T: Any>: Comparable {
 public typealias JSONIndex = Index<JSON>
 public typealias JSONRawIndex = Index<Any>
 
+// MARK: - 集合类型的
 extension JSON: Swift.Collection {
 
     public typealias Index = JSONRawIndex
