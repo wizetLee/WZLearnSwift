@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DDE104A52BE2875E6DF3D96 /* Pods_WZLearnSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA15A2532D534FE3044D5D30 /* Pods_WZLearnSwift.framework */; };
 		40027C571F5A38B2002A0FCF /* WZBaseAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40027C561F5A38B2002A0FCF /* WZBaseAlert.swift */; };
 		40027C591F5A3970002A0FCF /* WZToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40027C581F5A3970002A0FCF /* WZToast.swift */; };
 		403DE7381EF8195A0059711D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403DE7371EF8195A0059711D /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DADD1B102F3ADC4684D4181 /* Pods-WZLearnSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZLearnSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZLearnSwift/Pods-WZLearnSwift.release.xcconfig"; sourceTree = "<group>"; };
 		40027C561F5A38B2002A0FCF /* WZBaseAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZBaseAlert.swift; sourceTree = "<group>"; };
 		40027C581F5A3970002A0FCF /* WZToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZToast.swift; sourceTree = "<group>"; };
 		403DE7341EF8195A0059711D /* WZLearnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLearnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,8 @@
 		84851ADD1F6668AA004426E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84851ADF1F6668AE004426E3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		84851AE01F6668B1004426E3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B611DCBBAD15E2C47D00E37D /* Pods-WZLearnSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZLearnSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZLearnSwift/Pods-WZLearnSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		FA15A2532D534FE3044D5D30 /* Pods_WZLearnSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZLearnSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DDE104A52BE2875E6DF3D96 /* Pods_WZLearnSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +127,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E66E06B4905CB400BEE5FC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B611DCBBAD15E2C47D00E37D /* Pods-WZLearnSwift.debug.xcconfig */,
+				3DADD1B102F3ADC4684D4181 /* Pods-WZLearnSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		39B12F3F3B0533DA3BED1F3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA15A2532D534FE3044D5D30 /* Pods_WZLearnSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		403DE72B1EF8195A0059711D = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +152,8 @@
 				403DE74B1EF8195A0059711D /* WZLearnSwiftTests */,
 				403DE7561EF8195A0059711D /* WZLearnSwiftUITests */,
 				403DE7351EF8195A0059711D /* Products */,
+				2E66E06B4905CB400BEE5FC8 /* Pods */,
+				39B12F3F3B0533DA3BED1F3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 403DE75C1EF8195A0059711D /* Build configuration list for PBXNativeTarget "WZLearnSwift" */;
 			buildPhases = (
+				781B0D25DFD64EA6BB88A0F0 /* [CP] Check Pods Manifest.lock */,
 				403DE7301EF8195A0059711D /* Sources */,
 				403DE7311EF8195A0059711D /* Frameworks */,
 				403DE7321EF8195A0059711D /* Resources */,
+				706622FC1EA86C3F1259A35A /* [CP] Embed Pods Frameworks */,
+				BB6E6C8EDA21E62C126D498E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,6 +400,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		706622FC1EA86C3F1259A35A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZLearnSwift/Pods-WZLearnSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		781B0D25DFD64EA6BB88A0F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB6E6C8EDA21E62C126D498E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZLearnSwift/Pods-WZLearnSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		403DE7301EF8195A0059711D /* Sources */ = {
@@ -578,6 +653,7 @@
 		};
 		403DE75D1EF8195A0059711D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B611DCBBAD15E2C47D00E37D /* Pods-WZLearnSwift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -595,6 +671,7 @@
 		};
 		403DE75E1EF8195A0059711D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DADD1B102F3ADC4684D4181 /* Pods-WZLearnSwift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

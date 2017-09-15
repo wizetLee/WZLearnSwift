@@ -1,0 +1,6 @@
+framework module Pods_WZLearnSwift {
+  umbrella header "Pods-WZLearnSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
