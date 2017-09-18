@@ -148,10 +148,10 @@ class JSONViewController: WZBaseViewController {
     
     private func JSONAnalysis() {
         JSONAnalysisWithSystemAPI()
-        //使用系统的方法 貌似只有一个字段上的类型不匹配都会返回错误。要求数据匹配比较精准
+        //使用系统的方法 貌似只有一个字段上的类型不匹配都会返回错误。要求后台数据匹配比较精准，用起来也算是方便
         
         JSONAnalysisWithThirdPartyAPI()
-        //这个第三方的兼容性比较强吧，但是总是需要自己做类型检查， 简直了
+        //这个第三方的兼容性比较强吧，但是总是需要自己做类型检查，繁琐，简直了
     }
     
     // MARK: - 系统自带的解析JSON方式 JSON转自定义数据类型、自定义数据类型转为JSON
@@ -162,7 +162,7 @@ class JSONViewController: WZBaseViewController {
         do {
             let jd  = JSONDecoder()
             ///处理浮点类型 正无穷 负无穷 和 nan 类型的策略
-            jd.nonConformingFloatDecodingStrategy = .convertFromString(positiveInfinity: "infinity", negativeInfinity: "-infinity", nan: "nan")///没效果啊....
+            jd.nonConformingFloatDecodingStrategy = .convertFromString(positiveInfinity: "infinity", negativeInfinity: "-infinity", nan: "nan")///暂时没出现效果
             
             //缺点  如果有一个类型匹配错误的化就直接抛出错误
             let xiaoming = try jd.decode(XiaoMing.self, from: jsonStr1.data(using: .utf8)!)
@@ -177,7 +177,6 @@ class JSONViewController: WZBaseViewController {
             je.outputFormatting = .prettyPrinted
             let data = try je.encode(xiaohong)
             let json = String(data: data, encoding: .utf8)
-            
             
             /* JSON 输出格式的
              compact //紧凑的类型  默认的类型
@@ -206,7 +205,7 @@ class JSONViewController: WZBaseViewController {
     // JSON str -》 data -》 数组
     private func JSONAnalysisWithThirdPartyAPI() {
         if let jsonData = jsonStr2.data(using: String.Encoding.utf8, allowLossyConversion: false) {
-            ///旧的传统的 JSON解析方法， 得到的只能是字典或者是数组
+            ///旧的传统的 JSON解析方法， 得到的只能是字典或者是数组  需要不断地进行数据判断
             if let tmpArray = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) {
                 //数组（字典）
                 if ((tmpArray as? [[String :AnyObject /*字符或者数组*/]]) != nil) {///Dictionary<String , AnyObject>
