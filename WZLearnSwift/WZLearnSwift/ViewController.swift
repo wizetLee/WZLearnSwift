@@ -51,6 +51,9 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         JSONBtn.addTarget(self, action: sel, for: .touchUpInside)
         JSONBtn.layer.borderColor = UIColor.black.cgColor;
         JSONBtn.layer.borderWidth = 1.0;
+        
+        var Array : Array<String> = ["ss", "ee"];
+        var eee : Array<Array<String>> = [["ss", "ee"], ["aa", "bb"],  ["aa", "bb"]];
     }
     
     // MARK: - delegate
