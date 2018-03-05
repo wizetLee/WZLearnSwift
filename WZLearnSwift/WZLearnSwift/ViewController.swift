@@ -52,8 +52,17 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         JSONBtn.layer.borderColor = UIColor.black.cgColor;
         JSONBtn.layer.borderWidth = 1.0;
         
-        var Array : Array<String> = ["ss", "ee"];
-        var eee : Array<Array<String>> = [["ss", "ee"], ["aa", "bb"],  ["aa", "bb"]];
+        let sheeps : Array<String> = ["white sheep", "white sheep", "black sheep", "white sheep"]//数组
+        var numberOfType: Dictionary<String, Int> = [:] //字典
+        for sheep in sheeps {
+            if let number = numberOfType[sheep] {
+                numberOfType[sheep] = number + 1
+            } else {
+                numberOfType[sheep] = 1
+            }
+        }
+        print(numberOfType);
+        
     }
     
     // MARK: - delegate

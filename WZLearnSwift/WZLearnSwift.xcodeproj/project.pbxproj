@@ -339,7 +339,7 @@
 				TargetAttributes = {
 					403DE7331EF8195A0059711D = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 7MUPB6659U;
+						DevelopmentTeam = G583SJY324;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -669,7 +669,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7MUPB6659U;
+				DEVELOPMENT_TEAM = G583SJY324;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = WZLearnSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -687,7 +687,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7MUPB6659U;
+				DEVELOPMENT_TEAM = G583SJY324;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = WZLearnSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
